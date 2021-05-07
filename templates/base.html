@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description" content="Book summarizer Flask app">
+  <meta name="author" content="Philippe Planchar">
+
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+  <link rel="icon" href="{{ url_for('static',filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+    <header class="text-center vertical-center">
+      <div class="small-container">
+        <h1>Book Summarizer</h1>
+        <p>
+          This is a minimal Flask app to attempt to summarize a book from 
+          <a href="https://gutenberg.org">Project Gutenberg</a>.
+        </p>
+        <h3>Quickstart</h3>
+        <p>
+            Provide a link to the text file of the ebook and hit Submit.
+        </p>
+        <code>
+            e.g.: https://www.gutenberg.org/files/103/103.txt
+        </code>
+      </div>          
+    </header>
+    
+    <section>
+      <div class="small-container">
+        {% block content %}{% endblock %}
+      </div>
+    </section>
+
+    <footer class="text-center vertical-center">
+      <div class="small-container">
+        <blockquote>
+          <p>
+            We human beings were never born to read; we invented reading 
+            and then had to teach it to every new generation. Each new 
+            reader comes to reading with a 'fresh' brain - one that is 
+            programmed to speak, see, and think, but not to read.
+          </p>
+          <cite>Maryanne Wolf</cite>
+        </blockquote>
+        
+        <p>
+          © 2021 | Made to test 
+          <a href="https://huggingface.co/transformers" target="_blank">🤗 Transformers</a>
+           | Made with ❤️ & ☕ by 
+          <a href="https://github.com/planchar">Philippe Planchar</a>
+        </p>        
+      </div>
+    </footer>
+</body>
+</html>

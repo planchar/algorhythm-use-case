@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Book Summarizer{% endblock %}
+
+{% block content %}
+<main class="content">
+    <!-- form to request a book to summarize -->
+    <form action="#" method="POST">
+        <label for="url">URL: </label>
+        <input name="url" type="url" placeholder="https://www.gutenberg.org/files/103/103.txt">
+        <!-- <br> -->
+
+        <input type="submit" value="Submit">
+        <!-- <br><br> -->
+    </form>
+    <p id="summary">Summary comes here.</p>
+</main>
+{% endblock %}
